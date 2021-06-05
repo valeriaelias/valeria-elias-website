@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Valeria Elias Blog",
+    title: "Valeria Elias Website",
   },
   plugins: [
     "gatsby-plugin-image",
@@ -25,5 +25,14 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
+    },
+    `ve-mui-theme`,
   ],
 };
