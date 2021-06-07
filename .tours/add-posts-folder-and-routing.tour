@@ -1,23 +1,23 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "Add the Blog Directory and Create Page Template and Pages (Routing)",
+  "title": "Add the Blog Directory and Create the Blog Page Template and Pages Routing",
   "steps": [
     {
       "file": "gatsby-config.js",
-      "description": "- Set Gatsby to source data from the src/content directory via the gatsby-source-filesystem plugin\r\n- The gatsby-source-filesystem already creates its MDX node in GraphQL",
-      "line": 28
+      "description": "- Set the gatsby-source-filesystem plugin to source all MDX files under the posts directory\r\n- Each MDX file will be a new MDX node in GraphQL",
+      "line": 21
     },
     {
-      "directory": "src/content/blog",
-      "description": "- Add the src/content/blog directory for keeping all the blog posts MDX files\r\n- The gatsby-source-filesystem will take care of sourcing all the MDX files in the folder and subfolders and add them to the GraphQL as a MDX node\r\n- The subfolders after the path defined on the gatsby-config.js (eg.: 'src/content') + the MDX file name will be defined as the node slug"
+      "directory": "src/posts",
+      "description": "- Add the posts directory and some posts\r\n- Use subfolders with year/month/day and the post file name"
     },
     {
       "directory": "src/templates",
-      "description": "- Add a template for the MDX files pages"
+      "description": "- Add a template file for the blog post page"
     },
     {
       "file": "gatsby-node.js",
-      "description": "- Create a page (routing) for each MDX node in GraphQL\r\n- Link them to the template file for blog post & pages\r\n- Set the page url/path as the MDX node slug ",
+      "description": "- Create a new slug field for each MDX node in the GraphQL that starts as 'blog', as the pages routing will be based on that\r\n- Create a page/routing for each MDX node using the template create in the previous step",
       "line": 1
     }
   ],
